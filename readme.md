@@ -1,9 +1,13 @@
+see pdf file for correct formatting
+
 https://leetcode.com/problems/diameter-of-binary-tree/#/description
  
 Question 
 Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root. 
 Example:
 Given a binary tree
+
+
          1
          / \
         2   3
@@ -54,6 +58,8 @@ the diameter doesn’t passes through the node
 Case 1 : diameter passes through the node
     Then diameter would be height of left subtree + height of right subtree
 
+[fig here]
+
 For e.g. in above figure diameter is 3 as node 1 is part of path of diameter which is 
 4 - 2 - 1 - 3
 Diameter = left subtree height (2) + right subtree height (1)
@@ -84,7 +90,7 @@ And third point assumes that diameter passes through that node.
  
  
  
- 
+ ```
 class Solution {
 public:
  
@@ -108,7 +114,7 @@ public:
      
 };
  
- 
+```
  
  
  
@@ -177,6 +183,7 @@ Output - 8
  
 [Gif here]
  
+ ```
 class Solution {
 public:
     int dia(TreeNode * root, int &height)
@@ -200,7 +207,7 @@ public:
         return dia(root,h);
     }
 };
- 
+ ```
 Complexity Analysis
 O(n)
 For each node, height is calculated in O(1) and recursion goes for all nodes in the tree. Therefore complexity is O(n).
